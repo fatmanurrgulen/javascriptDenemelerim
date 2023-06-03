@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script >
+ function kontrol () {
+  let x = document.forms["myForm"] ["fah"].value;
+  if(x=="" || isNaN(x) ){
+        alert("Lütfen bir değer giriniz..");
+        return false;
+      }
+
+      else {
+     		document.getElementById("sonuc").innerHTML =
+		x + " fahrenheit " + toCelsius(x) + " derecedir.";
+
+function toCelsius(fahrenheit) {
+			return (5/9) * (fahrenheit-32);
+		}
+
+
+        return false;     
+           }
+    }
+
+
+  </script>
+</head>
+<body>
+  <h2>JavaScript Validation</h2>
+<form name="myForm" onsubmit="return kontrol()">
+  fahrenheit:  <input type= "text" name="fah">
+
+  <input type="submit" value="Gönder">
+
+</form>
+<p id="sonuc"> </p>
+
+
+</body>
+</html>

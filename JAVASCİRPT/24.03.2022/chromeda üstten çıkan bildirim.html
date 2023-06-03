@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function kontrol() {
+  let x = document.forms["myForm"]["isim"].value;
+  if (x == "") {
+    alert("isim boş geçilemez");
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+
+
+<form name="myForm"  onsubmit="return kontrol()">
+  isim: <input type="text" name="isim">
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
